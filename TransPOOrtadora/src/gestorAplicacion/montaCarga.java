@@ -4,6 +4,10 @@ public class montaCarga {
 	private String tipo;
 	private int capacidad;
 	
+	public montaCarga(String tipo,int capacidad) {
+		this.tipo=tipo;
+		this.capacidad=capacidad;
+	}
 	
 	public int getCapacidad() {
 		return capacidad;

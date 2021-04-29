@@ -5,6 +5,11 @@ public class AuxiliarBodega {
 	private int documento;
 	private boolean controlaMontaCarga;
 	
+	public AuxiliarBodega(String nombre,int documento,boolean controlaMontaCarga) {
+		this.nombre=nombre;
+		this.documento=documento;
+		this.controlaMontaCarga=controlaMontaCarga;
+	}
 	
 	public String getNombre() {
 		return nombre;

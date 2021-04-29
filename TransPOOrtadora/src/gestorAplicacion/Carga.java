@@ -4,6 +4,12 @@ public class Carga {
 	private String tipo;
 	private int peso;
 	private int volumen;
+	
+	public Carga(String tipo,int peso,int volumen) {
+		this.tipo=tipo;
+		this.peso=peso;
+		this.volumen=volumen;
+	}
 		
 	public String getTipo() {
 		return tipo;

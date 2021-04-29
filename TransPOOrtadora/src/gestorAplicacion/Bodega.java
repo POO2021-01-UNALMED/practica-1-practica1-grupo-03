@@ -1,9 +1,15 @@
 package gestorAplicacion;
 import java.util.ArrayList;
 
+
 public class Bodega {
 	private int capacidad;
-	private ArrayList<Carga> cargas = new ArrayList<Carga>();
+	static ArrayList<Bodega> cargas = new ArrayList<>();
+
+	public Bodega(int capacidad) {
+		this.capacidad=capacidad;
+		cargas.add(this);
+	}
 	
 	public int getCapacidad() {
 		return capacidad;
@@ -11,13 +17,6 @@ public class Bodega {
 	public void setCapacidad(int capacidad) {
 		this.capacidad = capacidad;
 	}
-	public ArrayList<Carga> getCargas() {
-		return cargas;
-	}
-	public void setCargas(ArrayList<Carga> cargas) {
-		this.cargas = cargas;
-	}
-	
 	
 }
 

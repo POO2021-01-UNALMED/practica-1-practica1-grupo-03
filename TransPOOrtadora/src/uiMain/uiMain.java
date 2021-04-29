@@ -1,5 +1,6 @@
 package uiMain;
 import java.util.*;
+import gestorAplicacion.Vehiculo;
 
 public class uiMain {
 	@SuppressWarnings("resource")
@@ -20,7 +21,7 @@ public class uiMain {
 			System.out.println();
 			String option = input.next();
 	            if (option.equals("1")) {
-	            	System.out.println("probando 1"); 
+	            	
 	            }else if (option.equals("2")) {
 	            	System.out.println("probando 2"); 
 	            }else if(option.equals("3")){
