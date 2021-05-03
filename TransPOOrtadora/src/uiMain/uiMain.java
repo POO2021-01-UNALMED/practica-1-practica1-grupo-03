@@ -21,6 +21,7 @@ public class uiMain {
 			System.out.println("5. Ver Auxiliar de bodega.");      
 			System.out.println("0. Salir.");	        
 			System.out.println();
+			System.out.println("-----------------");
 			String option = input.next();
 	            if (option.equals("1")) {
 	            	
