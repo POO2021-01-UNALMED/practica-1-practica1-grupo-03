@@ -1,6 +1,7 @@
 package uiMain;
 import java.util.*;
-import gestorAplicacion.Vehiculo;
+
+//import gestorAplicacion.Vehiculo;
 
 public class uiMain {
 	@SuppressWarnings("resource")
@@ -9,6 +10,7 @@ public class uiMain {
 		
 		while(true) {
 			System.out.println();
+			System.out.println("Hola");
 			System.out.println("-----------------------------");
 			System.out.println("Bienvenido a la TransPOOrtadora : "); 
 			System.out.println("Escoja una opcion:");
