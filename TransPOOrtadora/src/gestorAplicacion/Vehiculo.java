@@ -1,9 +1,9 @@
 package gestorAplicacion;
 
 public class Vehiculo {
-	private String placa;
-	private String marca;
-	private int capacidad;
+	protected String placa;
+	protected String marca;
+	protected int capacidad;
 	
 	public Vehiculo(String placa,String marca,int capacidad) {
 		this.placa=placa;

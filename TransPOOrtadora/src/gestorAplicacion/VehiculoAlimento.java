@@ -3,7 +3,6 @@ package gestorAplicacion;
 
 public class VehiculoAlimento extends Vehiculo{
 
-
     private boolean refrigerado;
     private double  temperatura;
 
