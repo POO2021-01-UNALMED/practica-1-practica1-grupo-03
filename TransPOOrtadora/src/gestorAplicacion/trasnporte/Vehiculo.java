@@ -30,4 +30,8 @@ public class Vehiculo {
 		this.capacidad = capacidad;
 	}
 
+
+
+
+
 }
