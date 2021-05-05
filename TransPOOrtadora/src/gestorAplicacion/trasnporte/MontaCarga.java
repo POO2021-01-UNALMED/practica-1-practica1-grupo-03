@@ -1,10 +1,10 @@
-package gestorAplicacion;
+package gestorAplicacion.trasnporte;
 
-public class montaCarga {
+public class MontaCarga {
 	private String tipo;
 	private int capacidad;
 	
-	public montaCarga(String tipo,int capacidad) {
+	public MontaCarga(String tipo, int capacidad) {
 		this.tipo=tipo;
 		this.capacidad=capacidad;
 	}

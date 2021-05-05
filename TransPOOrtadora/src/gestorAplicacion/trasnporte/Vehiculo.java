@@ -1,4 +1,4 @@
-package gestorAplicacion;
+package gestorAplicacion.trasnporte;
 
 public class Vehiculo {
 	protected String placa;
@@ -29,5 +29,5 @@ public class Vehiculo {
 	public void setCapacidad(int capacidad) {
 		this.capacidad = capacidad;
 	}
-	
+
 }

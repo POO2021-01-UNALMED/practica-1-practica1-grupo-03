@@ -1,4 +1,4 @@
-package gestorAplicacion;
+package gestorAplicacion.trasnporte;
 
 public class VehiculoPesado extends Vehiculo{
 

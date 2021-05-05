@@ -1,15 +1,20 @@
-package gestorAplicacion;
+package gestorAplicacion.empleado;
 
-public class AuxiliarBodega {
+public class AuxiliarBodega extends Empleado {
 	private String nombre;
 	private int documento;
 	private boolean controlaMontaCarga;
-	
-	public AuxiliarBodega(String nombre,int documento,boolean controlaMontaCarga) {
-		this.nombre=nombre;
-		this.documento=documento;
-		this.controlaMontaCarga=controlaMontaCarga;
+
+	public AuxiliarBodega(String nombre, int cedula) {
+		super(nombre, cedula);
 	}
+
+//	public AuxiliarBodega(String nombre,int documento,boolean controlaMontaCarga) {
+//
+//		this.nombre=nombre;
+//		this.documento=documento;
+//		this.controlaMontaCarga=controlaMontaCarga;
+//	}
 	
 	public String getNombre() {
 		return nombre;
