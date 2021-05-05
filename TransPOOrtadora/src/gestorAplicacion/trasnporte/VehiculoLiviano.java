@@ -17,4 +17,8 @@ public class VehiculoLiviano extends Vehiculo{
     public void setTipoVehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
     }
+
+
+
+
 }

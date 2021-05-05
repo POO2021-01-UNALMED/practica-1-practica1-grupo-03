@@ -1,10 +1,7 @@
 package gestorAplicacion.empleado;
 
-public class Montacarguista extends Empleado  {
+public class Montacarguista  extends Conductor {
 
 
-    public Montacarguista(String nombre, int cedula) {
-        super(nombre, cedula);
-    }
 
 }

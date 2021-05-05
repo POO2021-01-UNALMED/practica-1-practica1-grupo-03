@@ -1,15 +1,24 @@
 package gestorAplicacion.trasnporte;
 
+import gestorAplicacion.Carga;
+
+import java.util.ArrayList;
+
 public class Vehiculo {
 	protected String placa;
 	protected String marca;
 	protected int capacidad;
+
+	static ArrayList<Vehiculo> Vehiculos = new ArrayList<>();
 	
 	public Vehiculo(String placa,String marca,int capacidad) {
 		this.placa=placa;
 		this.marca=marca;
 		this.capacidad=capacidad;
+		Vehiculos.add(this);
 	}
+
+
 	
 	public String getPlaca() {
 		return placa;
@@ -31,7 +40,20 @@ public class Vehiculo {
 	}
 
 
+	public void CargarVehiculo(Carga carga){
+		if (carga.getTipo().equals("Alimento")){
+			buscarAuto();
 
+		} else if(carga.getTipo().equals("Liviano")){
+			System.out.println(12);
+		} else{
+			System.out.println(12);
+		}
+
+	}
+
+	private void buscarAuto() {
+	}
 
 
 }

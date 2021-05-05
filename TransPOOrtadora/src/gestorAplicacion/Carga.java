@@ -4,6 +4,8 @@ public class Carga {
 	private String tipo;
 	private int peso;
 	private int volumen;
+
+
 	
 	public Carga(String tipo,int peso,int volumen) {
 		this.tipo=tipo;
@@ -29,5 +31,7 @@ public class Carga {
 	public void setVolumen(int volumen) {
 		this.volumen = volumen;
 	}
+
+
 	
 }
