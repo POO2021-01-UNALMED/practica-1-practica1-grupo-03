@@ -6,6 +6,12 @@ public class VehiculoAlimento extends Vehiculo{
     private boolean refrigerado;
     private double  temperatura;
 
+    public VehiculoAlimento(String placa, String marca, int capacidad, boolean refrigerado, double temperatura) {
+        super(placa, marca, capacidad);
+        this.refrigerado = refrigerado;
+        this.temperatura = temperatura;
+    }
+
     public VehiculoAlimento(String placa, String marca, int capacidad) {
         super(placa, marca, capacidad);
     }
