@@ -1,25 +1,25 @@
 package gestorAplicacion.trasnporte;
 
 import gestorAplicacion.Carga;
+import gestorAplicacion.empleado.Conductor;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Vehiculo {
+public class Vehiculo implements Serializable {
+
 	protected String placa;
 	protected String marca;
 	protected int capacidad;
-
-	static ArrayList<Vehiculo> Vehiculos = new ArrayList<>();
+	public static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 	
 	public Vehiculo(String placa,String marca,int capacidad) {
 		this.placa=placa;
 		this.marca=marca;
 		this.capacidad=capacidad;
-		Vehiculos.add(this);
+		vehiculos.add(this);
 	}
 
-
-	
 	public String getPlaca() {
 		return placa;
 	}
@@ -39,21 +39,24 @@ public class Vehiculo {
 		this.capacidad = capacidad;
 	}
 
+	@Override
+	public String toString() {
+		return "Vehiculo{" +
+				"placa='" + placa + '\'' +
+				", marca='" + marca + '\'' +
+				", capacidad=" + capacidad +
+				'}';
+	}
 
-	public void CargarVehiculo(Carga carga){
-		if (carga.getTipo().equals("Alimento")){
-			buscarAuto();
-
-		} else if(carga.getTipo().equals("Liviano")){
-			System.out.println(12);
-		} else{
-			System.out.println(12);
+	public static void verVehiculos() {
+		if(vehiculos.size()==0){
+			System.out.println("no hay ningun vehiculo");
 		}
-
+		for (Vehiculo vehiculo : vehiculos) {
+			System.out.println(vehiculo);
+		}
 	}
 
-	private void buscarAuto() {
-	}
 
 
 }

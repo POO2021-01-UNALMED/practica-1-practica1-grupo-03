@@ -1,5 +1,7 @@
 package gestorAplicacion.empleado;
 
+import java.io.Serializable;
+
 public abstract class Empleado  {
 
     private String nombre;
