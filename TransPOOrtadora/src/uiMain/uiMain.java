@@ -1,7 +1,15 @@
 package uiMain;
 
+import gestorAplicacion.Bodega;
+import gestorAplicacion.Carga;
+import gestorAplicacion.Ruta;
+
 import java.util.*;
 
+import static gestorAplicacion.Bodega.agregarCargaBodega;
+import static gestorAplicacion.Bodega.verBodega;
+import static gestorAplicacion.Carga.*;
+import static gestorAplicacion.Ruta.*;
 import static gestorAplicacion.empleado.AuxiliarBodega.AuxBodega;
 import static gestorAplicacion.empleado.Conductor.conductor;
 import static gestorAplicacion.empleado.Montacarguista.montacarguista;
@@ -77,9 +85,6 @@ public class uiMain {
         }
     }
 
-
-
-
     private static void opcionCentroDespacho() {
 		@SuppressWarnings("resource")
 		Scanner in=new Scanner(System.in);
@@ -90,8 +95,8 @@ public class uiMain {
             System.out.println("En este apartado podrá ver toda la información acerca del Centro de despacho");
             System.out.println("Escoja una opcion:");
             System.out.println("1. Ver vehiculos.");
-            System.out.println("2. Despachar vehiculo.");
-            System.out.println("3. Eliminar centro logistico.");
+            System.out.println("2. Ver cargas.");
+            System.out.println("3. Despachar vehiculo.");
             System.out.println("0. Salir.");
             System.out.println("-----------------------------");
             System.out.println();
@@ -109,6 +114,7 @@ public class uiMain {
 	}
 
 	private static void opcionRuta() {
+        listaRutas();
 		@SuppressWarnings("resource")
 		Scanner in=new Scanner(System.in);
 		String option;
@@ -125,11 +131,11 @@ public class uiMain {
             System.out.println();
             option = in.next();
             if (option.equals("1")) {
-
+                Ruta.verRutas();
             }else if (option.equals("2")) {
-                
+                opcionAgregarRuta();
             }else if(option.equals("3")){
-               
+                elimRuta();
             }else if(option.equals("0")){
                 break;
             }
@@ -143,9 +149,9 @@ public class uiMain {
         while(true) {
             System.out.println();
             System.out.println("-----------------------------");
-            System.out.println("En este apartado podrá ver toda la información acerca de Carga");
+            System.out.println("En este apartado podra ver toda la informacion acerca de Carga");
             System.out.println("Escoja una opcion:");
-            System.out.println("1. Tipos de carga.");
+            System.out.println("1. Ver cargas.");
             System.out.println("2. Agregar carga.");
             System.out.println("3. Eliminar carga.");
             System.out.println("0. Salir.");
@@ -153,18 +159,18 @@ public class uiMain {
             System.out.println();
             option = in.next();
             if (option.equals("1")) {
-               
+                verCargas();
             }else if (option.equals("2")) {
-                
+                agregarCargas();
             }else if(option.equals("3")){
-               
+                elimCargas();
             }else if(option.equals("0")){
                 break;
             }
         }
 	}
 
-	private static void opcionBodega() {
+    private static void opcionBodega() {
 		@SuppressWarnings("resource")
 		Scanner in=new Scanner(System.in);
 		String option;
@@ -173,26 +179,23 @@ public class uiMain {
             System.out.println("-----------------------------");
             System.out.println("En este apartado podrá ver toda la información acerca de Bodega");
             System.out.println("Escoja una opcion:");
-            System.out.println("1. Informacion Bodega.");
-            System.out.println("2. Agregar bodega.");
-            System.out.println("3. Eliminar bodega.");
+            System.out.println("1. Informacion Bodegas.");
+            System.out.println("2. Agregar carga a bodega.");
             System.out.println("0. Salir.");
             System.out.println("-----------------------------");
             System.out.println();
             option = in.next();
             if (option.equals("1")) {
-               
+                verBodega();
             }else if (option.equals("2")) {
-                
-            }else if(option.equals("3")){
-               
+                agregarCargaBodega();
             }else if(option.equals("0")){
                 break;
             }
         }
 	}
 
-	private static void opcionVehiculos() {
+    private static void opcionVehiculos() {
 		@SuppressWarnings("resource")
 		Scanner in=new Scanner(System.in);
 		String option;
