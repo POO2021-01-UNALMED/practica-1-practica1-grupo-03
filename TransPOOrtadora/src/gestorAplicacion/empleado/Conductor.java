@@ -68,7 +68,7 @@ public class Conductor extends Empleado {
                 System.out.println(" Escoga el tipo de vehiculo del conductor");
                 System.out.println("1. Alimento.");
                 System.out.println("2. Liviano.");
-                System.out.println("2. Pesado(remolque).");
+                System.out.println("3. Pesado(remolque).");
                 String opcion= in.next();
                 if(opcion.equals("1")){
                     empleados.add(documento);

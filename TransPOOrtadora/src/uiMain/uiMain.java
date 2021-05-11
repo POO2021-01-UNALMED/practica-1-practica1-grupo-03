@@ -9,6 +9,7 @@ import java.util.*;
 import static gestorAplicacion.Bodega.agregarCargaBodega;
 import static gestorAplicacion.Bodega.verBodega;
 import static gestorAplicacion.Carga.*;
+import static gestorAplicacion.CentroDespacho.despachoVehiculo;
 import static gestorAplicacion.Ruta.*;
 import static gestorAplicacion.empleado.AuxiliarBodega.AuxBodega;
 import static gestorAplicacion.empleado.Conductor.conductor;
@@ -94,15 +95,15 @@ public class uiMain {
             System.out.println("-----------------------------");
             System.out.println("En este apartado podrá ver toda la información acerca del Centro de despacho");
             System.out.println("Escoja una opcion:");
-            System.out.println("1. Ver vehiculos.");
-            System.out.println("2. Ver cargas.");
-            System.out.println("3. Despachar vehiculo.");
+            System.out.println("1. Despachar vehiculo.");
+            System.out.println("2. Ver vehiculos.");
+            System.out.println("3. Ver cargas.");
             System.out.println("0. Salir.");
             System.out.println("-----------------------------");
             System.out.println();
             option = in.next();
             if (option.equals("1")) {
-               
+                despachoVehiculo();
             }else if (option.equals("2")) {
                 
             }else if(option.equals("3")){
@@ -113,7 +114,9 @@ public class uiMain {
         }
 	}
 
-	private static void opcionRuta() {
+
+
+    private static void opcionRuta() {
         listaRutas();
 		@SuppressWarnings("resource")
 		Scanner in=new Scanner(System.in);

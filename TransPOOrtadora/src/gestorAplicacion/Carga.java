@@ -1,6 +1,8 @@
 package gestorAplicacion;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class Carga {
 	private int referencia;
@@ -74,14 +76,35 @@ public class Carga {
 				return;
 			}
 		}
-		System.out.println(" Ingrese el tipo de carga que va a agregar.");
-		String tipo= in.next();
-		System.out.println(" Ingrese el peso de la carga.");
-		int peso=in.nextInt();
-		System.out.println(" Ingrese el volumen de la carga.");
-		double volumen=in.nextInt();
-		Carga newCarga=new Carga(referencia,tipo,peso,volumen);
-		System.out.println(" Registro Exitoso");
+		System.out.println(" Escoga el tipo de carga que va a agregar");
+		System.out.println("1. Alimento.");
+		System.out.println("2. Liviano.");
+		System.out.println("3. Pesado.");
+		String opcion= in.next();
+		if(opcion.equals("1")){
+			System.out.println(" Ingrese el peso de la carga.");
+			int peso=in.nextInt();
+			System.out.println(" Ingrese el volumen de la carga.");
+			double volumen=in.nextInt();
+			Carga newCarga=new Carga(referencia,"Alimento",peso,volumen);
+			System.out.println(" Registro Exitoso");
+		}else if(opcion.equals("2")){
+			System.out.println(" Ingrese el peso de la carga.");
+			int peso=in.nextInt();
+			System.out.println(" Ingrese el volumen de la carga.");
+			double volumen=in.nextInt();
+			Carga newCarga=new Carga(referencia,"Liviano",peso,volumen);
+			System.out.println(" Registro Exitoso");
+		}else if(opcion.equals("3")){
+			System.out.println(" Ingrese el peso de la carga.");
+			int peso=in.nextInt();
+			System.out.println(" Ingrese el volumen de la carga.");
+			double volumen=in.nextInt();
+			Carga newCarga=new Carga(referencia,"Pesado",peso,volumen);
+			System.out.println(" Registro Exitoso");
+		}else{
+			System.out.println("respuesta invalida");
+		}
 	}
 
 	public static void verCargas() {
