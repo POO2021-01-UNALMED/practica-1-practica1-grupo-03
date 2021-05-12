@@ -1,8 +1,8 @@
 package uiMain;
 
-import gestorAplicacion.Bodega;
-import gestorAplicacion.Carga;
+import baseDatos.Serializadora;
 import gestorAplicacion.Ruta;
+import gestorAplicacion.trasnporte.Vehiculo;
 
 import java.util.*;
 
@@ -23,6 +23,7 @@ public class uiMain {
     public static ArrayList<Integer> empleados = new ArrayList<>();
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+        Vehiculo vehiculo=new Vehiculo();
 		Scanner input=new Scanner(System.in);
 		while(true) {
 			System.out.println();
@@ -52,7 +53,7 @@ public class uiMain {
 	            }else if(option.equals("6")){
                     opcionEmpleado();
                 }else if(option.equals("0")){
-	                //salirDelsistema(centroDespacho);
+                    Serializadora.serializar(vehiculo);
 	                break;
 	            }
 	        }
@@ -228,11 +229,4 @@ public class uiMain {
             }
         }
 	}
-
-
-    //private static void salirDelsistema(CentroDespacho centroDespacho) {
-    //    System.out.println("¡Vuelva pronto!");
-    //    Serializadora.serializacion(centroDespacho);
-    //}
-
 }

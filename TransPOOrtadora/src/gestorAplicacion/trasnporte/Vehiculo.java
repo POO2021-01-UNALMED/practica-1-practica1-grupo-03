@@ -1,16 +1,16 @@
 package gestorAplicacion.trasnporte;
 
-import gestorAplicacion.Carga;
-import gestorAplicacion.empleado.Conductor;
-
+import baseDatos.Deserializador;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Vehiculo implements Serializable {
 
+	private static final long serialVersionUID=1L;
 	protected String placa;
 	protected String marca;
 	protected int capacidad;
+
 	public static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 	
 	public Vehiculo(String placa,String marca,int capacidad) {
@@ -20,6 +20,16 @@ public class Vehiculo implements Serializable {
 		vehiculos.add(this);
 	}
 
+	public Vehiculo(){
+		Deserializador.deserializar(this);
+	}
+
+	public static ArrayList<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+	public static void setVehiculos(ArrayList<Vehiculo> vehiculos) {
+		Vehiculo.vehiculos = vehiculos;
+	}
 	public String getPlaca() {
 		return placa;
 	}
